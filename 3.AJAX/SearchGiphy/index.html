@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Giphy Party</title>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <!-- Global container -->
+    <div
+      class="flex items-start justify-center min-h-scree px-10 py-5 flex-col"
+    >
+      <h1 class="m-auto text-3xl font-medium">GIPHY PARTY</h1>
+      <!-- search container -->
+      <div class="flex items-center justify-center w-full h-8 my-4">
+        <input
+          type="text"
+          class="bg-slate-200 rounded-md p-2 w-[300px] outline-none text-base pl-3"
+          placeholder="Enter a search term"
+          id="input-search"
+        />
+        <button
+          class="bg-blue-500 text-white px-5 py-2 text-base rounded-md hover:bg-blue-400 ml-3"
+          id="btn-search"
+        >
+          Search
+        </button>
+      </div>
+      <!-- image container -->
+      <div
+        class="grid grid-cols-5 gap-4 w-full h-full mt-4"
+        id="image-container"
+      >
+        
+      </div>
+    </div>
+  </body>
+</html>
