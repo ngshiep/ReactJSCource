@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <!-- Global container -->
+    <div
+      class="flex items-start justify-center min-h-screen px-10 py-5 flex-col"
+    >
+      <h1 class="mx-auto text-3xl font-medium text-gray-500">
+        Right now in Viet Nam, it's clear
+      </h1>
+      <!-- weather container -->
+      <div class="flex items-center justify-center w-full gap-4">
+        <!-- weather icon -->
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-[150px] h-[150px] text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"
+            />
+          </svg>
+        </span>
+        
+        <div class="flex items-center justify-center flex-col h-full mx-3">
+          <h1 class="text-black text-[80px] leading-none">64</h1>
+          <span class="text-gray-400 text-xl">42/45</span>
+        </div>
+
+
+        <div class="flex gap-1 flex-row h-[150px]">
+          <!-- icons -->
+          <div class="flex items-center gap-4 flex-col h-full justify-center" >
+            <div class="flex gap-2">
+              <span
+                class="text-gray-400 text-lg flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-sun-wind"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14.468 10a4 4 0 1 0 -5.466 5.46"></path>
+                  <path d="M2 12h1"></path>
+                  <path d="M11 3v1"></path>
+                  <path d="M11 20v1"></path>
+                  <path d="M4.6 5.6l.7 .7"></path>
+                  <path d="M17.4 5.6l-.7 .7"></path>
+                  <path d="M5.3 17.7l-.7 .7"></path>
+                  <path d="M15 13h5a2 2 0 1 0 0 -4"></path>
+                  <path
+                    d="M12 16h5.714l.253 0a2 2 0 0 1 2.033 2a2 2 0 0 1 -2 2h-.286"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="flex gap-2">
+              <span class="text-gray-400 flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-droplet"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            
+            <div class="flex gap-2">
+              <span
+                class="text-gray-400 text-center flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-umbrella"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 12a8 8 0 0 1 16 0z"></path>
+                  <path d="M12 12v6a2 2 0 0 0 4 0"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <!-- content -->
+          <div class="flex items-center gap-2 justify-center flex-col h-full " >
+            
+            <div class="flex gap-2 justify-start">
+              <div class="flex w-[100px]">
+                <span class="w-10 text-center text-3xl text-gray-500">70</span>
+                <p class="text-sm text-gray-400 leading-none flex items-end pb-1">
+                  km/h
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-2 justify-start">
+              <div class="flex w-[100px]">
+                <span class="w-10 text-center text-3xl text-gray-500">70</span>
+                <p class="text-sm text-gray-400 leading-none flex items-end pb-1">
+                  %
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-2 justify-start">
+              <div class="flex w-[100px]">
+                <span class="w-10 text-center text-3xl text-gray-500">70</span>
+                <p class="text-sm text-gray-400 leading-none flex items-end pb-1">
+                  %
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
