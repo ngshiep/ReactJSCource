@@ -6,6 +6,7 @@ import ChangeColorComponent from "./components/ChangeColorComponent";
 import ConditionalRenderingComponent from "./components/ConditionalRenderingComponent";
 import LoginComponent from "./components/LoginComponent";
 import MainComponent from "./components/MainComponent";
+import StudentManagerComponent from "./components/StudentManagerComponent";
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
       {/* <Calculator></Calculator> */}
 
       {/* <LoginComponent></LoginComponent> */}
-      <TodoList></TodoList>
+
+      {/* <TodoList></TodoList> */}
+      <StudentManagerComponent></StudentManagerComponent>
     </>
   );
 }
