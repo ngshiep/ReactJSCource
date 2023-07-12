@@ -1,6 +1,7 @@
 import './App.css'
 import AuthenticationComponent from './components/AuthenticationComponent'
 import Button from './components/Button'
+import Calculator from './components/Calculator'
 import ChangeColorComponent from './components/ChangeColorComponent'
 import ConditionalRenderingComponent from './components/ConditionalRenderingComponent'
 import MainComponent from './components/MainComponent'
@@ -21,7 +22,9 @@ function App() {
       {/* Kiểm tra User Login/Logout */}
       {/* <AuthenticationComponent></AuthenticationComponent> */}
 
-      <ConditionalRenderingComponent></ConditionalRenderingComponent>
+      {/* <ConditionalRenderingComponent></ConditionalRenderingComponent> */}
+
+      <Calculator></Calculator>
     </>
   )
 }
