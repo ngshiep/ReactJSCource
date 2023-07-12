@@ -1,13 +1,13 @@
-import './App.css'
-import AuthenticationComponent from './components/AuthenticationComponent'
-import Button from './components/Button'
-import Calculator from './components/Calculator'
-import ChangeColorComponent from './components/ChangeColorComponent'
-import ConditionalRenderingComponent from './components/ConditionalRenderingComponent'
-import MainComponent from './components/MainComponent'
+import "./App.css";
+import AuthenticationComponent from "./components/AuthenticationComponent";
+import Button from "./components/Button";
+import Calculator from "./components/Calculator";
+import ChangeColorComponent from "./components/ChangeColorComponent";
+import ConditionalRenderingComponent from "./components/ConditionalRenderingComponent";
+import LoginComponent from "./components/LoginComponent";
+import MainComponent from "./components/MainComponent";
 
 function App() {
-
   return (
     <>
       {/* Đếm số lần click vào Button tăng/giảm (State + event) LESSON PROGRESS */}
@@ -24,9 +24,10 @@ function App() {
 
       {/* <ConditionalRenderingComponent></ConditionalRenderingComponent> */}
 
-      <Calculator></Calculator>
+      {/* <Calculator></Calculator> */}
+      <LoginComponent></LoginComponent>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
