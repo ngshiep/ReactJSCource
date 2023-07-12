@@ -8,6 +8,7 @@ import ConditionalRenderingComponent from "./components/ConditionalRenderingComp
 import LoginComponent from "./components/LoginComponent";
 import MainComponent from "./components/MainComponent";
 import StudentManagerComponent from "./components/StudentManagerComponent";
+import TimerComponent from "./components/TimerComponent";
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
 
       {/* <StudentManagerComponent></StudentManagerComponent> */}
 
-      <CarSelectionComponent></CarSelectionComponent>
+      {/* <CarSelectionComponent></CarSelectionComponent> */}
+
+      <TimerComponent></TimerComponent>
     </>
   );
 }
