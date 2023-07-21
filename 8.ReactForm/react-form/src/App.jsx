@@ -3,6 +3,7 @@ import './App.css'
 import FormRegister from './components/FormRegister'
 import FormContact from './components/FormContact'
 import FormLibrary from './components/FormLibrary'
+import FormMail from './components/FormMail'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       {/* <FormRegister></FormRegister> */}
       {/* <FormContact></FormContact> */}
-      <FormLibrary></FormLibrary>
+      {/* <FormLibrary></FormLibrary> */}
+      <FormMail></FormMail>
     </>
   )
 }
