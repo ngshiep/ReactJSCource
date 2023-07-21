@@ -5,6 +5,8 @@ import Calculator from "./components/Calculator";
 import CarSelectionComponent from "./components/CarSelectionComponent";
 import ChangeColorComponent from "./components/ChangeColorComponent";
 import ConditionalRenderingComponent from "./components/ConditionalRenderingComponent";
+import Counter1 from "./components/Counter1";
+import Counter2 from "./components/Counter2";
 import LoginComponent from "./components/LoginComponent";
 import MainComponent from "./components/MainComponent";
 import StudentManagerComponent from "./components/StudentManagerComponent";
@@ -38,7 +40,10 @@ function App() {
 
       {/* <CarSelectionComponent></CarSelectionComponent> */}
 
-      <TimerComponent></TimerComponent>
+      {/* <TimerComponent></TimerComponent> */}
+
+      <Counter1></Counter1>
+      <Counter2></Counter2>
     </>
   );
 }
