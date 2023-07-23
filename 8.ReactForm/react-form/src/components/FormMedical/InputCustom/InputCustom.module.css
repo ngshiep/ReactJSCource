@@ -1,0 +1,12 @@
+.input {
+  font-size: 16px;
+  padding: 5px 5px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.label {
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+}

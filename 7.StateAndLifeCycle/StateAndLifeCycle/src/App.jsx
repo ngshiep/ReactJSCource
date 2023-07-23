@@ -38,12 +38,12 @@ function App() {
 
       {/* <StudentManagerComponent></StudentManagerComponent> */}
 
-      {/* <CarSelectionComponent></CarSelectionComponent> */}
+      <CarSelectionComponent></CarSelectionComponent>
 
       {/* <TimerComponent></TimerComponent> */}
 
-      <Counter1></Counter1>
-      <Counter2></Counter2>
+      {/* <Counter1></Counter1>
+      <Counter2></Counter2> */}
     </>
   );
 }
