@@ -1,14 +1,13 @@
-import React from "react";
 import styles from "./FormMedical.module.css";
-import { useState } from "react";
-import { Formik } from "formik";
+import { Field, Formik } from "formik";
 import InputCustom from "./InputCustom";
-import ErrorCustom from "./ErrorCustom";
 import FormMedicalSchema from "./validateFormMedical";
 
 export default function FormMedical() {
-  function handleSubmit() {
-    alert("Thêm liên hệ thành công");
+  function handleOnSubmit(values, actions) {
+    console.log(values);
+    console.log(actions);
+    //alert("Thêm liên hệ thành công");
   }
 
   return (
@@ -22,21 +21,23 @@ export default function FormMedical() {
           nationality: "",
           company: "",
           team: "",
-          insuranceCard: "",
+          insuranceCard: false,
           city: "",
           district: "",
           ward: "",
           address: "",
           phone: "",
           email: "",
+          visitedCountry: "",
+          signal: [],
+          contact: [],
         }}
         validationSchema={FormMedicalSchema}
-        onSubmit={handleSubmit}
+        onSubmit={handleOnSubmit}
       >
-        {({ handleChange, handleSubmit, values, errors }) => (
+        {({ handleChange, values, errors }) => (
           <>
             <h1 className={styles.form_header}>Sign up</h1>
-
             <InputCustom
               label={"Họ tên"}
               name={"name"}
@@ -44,7 +45,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Số hộ chiếu /CMND"}
               name={"cmnd"}
@@ -52,7 +52,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Năm sinh"}
               name={"dayOfBirth"}
@@ -61,13 +60,14 @@ export default function FormMedical() {
               errors={errors}
             ></InputCustom>
 
-            <InputCustom
-              label={"Giới tính"}
-              name={"sex"}
-              value={values.sex}
-              handleChange={handleChange}
-              errors={errors}
-            ></InputCustom>
+            <div className={styles.input_Container}>
+              <span>Giới tính</span>
+              <input type="radio" id="male" name="sex" value="Male"></input>
+              <label htmlFor="male">Name</label>
+
+              <input type="radio" id="female" name="sex" value="Female"></input>
+              <label htmlFor="female">Nữ</label>
+            </div>
 
             <InputCustom
               label={"Quốc tịch"}
@@ -76,7 +76,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Công ty làm việc"}
               name={"company"}
@@ -84,7 +83,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Bộ phận làm việc"}
               name={"team"}
@@ -93,13 +91,16 @@ export default function FormMedical() {
               errors={errors}
             ></InputCustom>
 
-            <InputCustom
-              label={"Có thẻ bảo hiểm y tế"}
-              name={"insuranceCard"}
-              value={values.insuranceCard}
-              handleChange={handleChange}
-              errors={errors}
-            ></InputCustom>
+            <div className={styles.input_Container}>
+              <label htmlFor="insuranceCard">Có thẻ bảo hiểm y tế</label>
+              <input
+                type="checkbox"
+                id="insuranceCard"
+                name="insuranceCard"
+                checked={values.insuranceCard}
+                onChange={handleChange}
+              ></input>
+            </div>
 
             <InputCustom
               label={"Tỉnh thành"}
@@ -108,7 +109,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Quận /huyện"}
               name={"district"}
@@ -116,7 +116,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Phường /xã"}
               name={"ward"}
@@ -124,7 +123,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Số nhà, phố, tổ dân phố /thôn /đội"}
               name={"address"}
@@ -132,7 +130,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Điện thoại"}
               name={"phone"}
@@ -140,7 +137,6 @@ export default function FormMedical() {
               handleChange={handleChange}
               errors={errors}
             ></InputCustom>
-
             <InputCustom
               label={"Email"}
               name={"email"}
@@ -149,9 +145,66 @@ export default function FormMedical() {
               errors={errors}
             ></InputCustom>
 
+            <h4 className={styles.header}>
+              Trong vòng 14 ngày qua, Anh /Chị có đến quốc gia/ vùng lãnh thổ
+              nào (Có thể đi qua nhiều quốc gia)
+            </h4>
+            <textarea
+              className={styles.textarea}
+              name="visitedCountry"
+              value={values.visitedCountry}
+              onChange={handleChange}
+            ></textarea>
+            <h4 className={styles.header}>
+              Tròng vòng 14 ngày qua, Anh/Chị có thấy xuất hiện dấu hiệu nào sau
+              đây không?
+            </h4>
+            <div className={styles.input_wrapper}>
+              <label>
+                <Field type="checkbox" name="signal" value="Sốt" />
+                Sốt
+              </label>
+              <label>
+                <Field type="checkbox" name="signal" value="Ho" />
+                Ho
+              </label>
+              <label>
+                <Field type="checkbox" name="signal" value="Khó thở" />
+                Khó thở
+              </label>
+              <label>
+                <Field type="checkbox" name="signal" value="Viêm phổi" />
+                Viêm phổi
+              </label>
+              <label>
+                <Field type="checkbox" name="signal" value=" Đau họng" />
+                Đau họng
+              </label>
+              <label>
+                <Field type="checkbox" name="signal" value="Mệt mỏi" />
+                Mệt mỏi
+              </label>
+            </div>
+            <h4 className={styles.header}>
+              Tròng vòng 14 ngày qua, Anh/Chị có tiếp xúc với?
+            </h4>
+            <div className={styles.input_wrapper}>
+              <label>
+                <Field type="checkbox" name="contact" value="Viêm phổi" />
+                Viêm phổi
+              </label>
+              <label>
+                <Field type="checkbox" name="contact" value=" Đau họng" />
+                Đau họng
+              </label>
+              <label>
+                <Field type="checkbox" name="contact" value="Mệt mỏi" />
+                Mệt mỏi
+              </label>
+            </div>
             <button
-              type="button"
-              onClick={handleSubmit}
+              type="submit"
+              onClick={(e) => handleOnSubmit(values)}
               className={styles.form_button}
             >
               Submit
