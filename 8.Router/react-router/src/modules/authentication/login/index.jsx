@@ -2,6 +2,7 @@ import React from "react";
 import "./login.css";
 import { Field, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
+import { saveDataToLS } from "../../../utils/localStorage";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ export default function Login() {
       return;
     }
     navigate("/");
+    saveDataToLS("user", JSON.stringify(values));
+    console.log("🚀 ~ file: index.jsx:16 ~ handleLogin ~ values:", values);
   };
   return (
     <div className="container">
