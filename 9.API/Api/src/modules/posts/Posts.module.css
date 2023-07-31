@@ -1,0 +1,77 @@
+.contianer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+}
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+}
+
+.form_Container {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form_header {
+}
+
+.input_Container {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.input_label {
+  display: block;
+}
+
+.input_item {
+  font-size: 16px;
+  padding: 5px 5px;
+  outline: none;
+}
+
+.input_textarea {
+  font-size: 16px;
+  padding: 5px 5px;
+  outline: none;
+  width: 100%;
+}
+
+.form_button {
+  padding: 8px 15px;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error_wrapper {
+  width: 100%;
+  height: 20px;
+  text-align: right;
+}
+
+.input_error {
+  font-size: 16px;
+  margin: 5px 0;
+  color: red;
+  padding-right: 20px;
+}
