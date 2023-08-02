@@ -1,10 +1,11 @@
-.contianer {
+.table_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  width: 400px;
+  width: 600px;
+  margin: 0 auto;
+  --primaryColor: #206bc4;
 }
 table {
   width: 100%;
@@ -17,12 +18,13 @@ td {
 }
 table {
   border-collapse: collapse;
+  margin-bottom: 30px;
 }
 
 .form_Container {
-  max-width: 450px;
-  margin: 0 auto;
-  text-align: center;
+  border: 1px solid #206bc4;
+  border-radius: 6px;
+  padding: 30px;
 }
 
 .form_header {
@@ -32,19 +34,24 @@ table {
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 16px;
+  align-items: start;
 }
 
 .input_label {
-  display: block;
+  display: inline-block;
 }
 
 .input_item {
   font-size: 16px;
   padding: 5px 5px;
   outline: none;
+  border: 1px solid;
+  border-radius: 6px;
+  width: 200px;
+  box-sizing: border-box;
+}
+.input_item:focus {
+  border: 1px solid #206bc4;
 }
 
 .input_textarea {
@@ -61,6 +68,15 @@ table {
   border: none;
   font-size: 16px;
   cursor: pointer;
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+.form_buttons_container {
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  border: 1px solid;
 }
 
 .error_wrapper {
@@ -70,7 +86,7 @@ table {
 }
 
 .input_error {
-  font-size: 16px;
+  font-size: 14px;
   margin: 5px 0;
   color: red;
   padding-right: 20px;

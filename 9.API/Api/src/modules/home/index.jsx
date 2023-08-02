@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { routers } from "../../config/routers";
+import { routers } from "../../routers/routers";
 import styles from "./Home.module.css";
 
 export default function Home() {
