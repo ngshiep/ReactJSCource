@@ -1,0 +1,44 @@
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 6px;
+}
+.post_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.post_title {
+}
+.post_desc {
+}
+.post_action {
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
